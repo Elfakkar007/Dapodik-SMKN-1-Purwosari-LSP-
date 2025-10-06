@@ -1,0 +1,93 @@
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+// Custom Variables
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --transition-speed: 0.3s;
+}
+
+// Global Styles
+body {
+  background-color: #f8f9fa;
+}
+
+// Card Animations
+.card {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Table Styles
+.table-responsive {
+  .table {
+    thead {
+      th {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+      }
+    }
+    
+    tbody {
+      tr {
+        transition: background-color var(--transition-speed);
+        
+        &:hover {
+          background-color: rgba(13, 110, 253, 0.1);
+        }
+      }
+    }
+  }
+}
+
+// Form Styles
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  
+  &:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}
+
+// Button Animations
+.btn {
+  border-radius: 0.5rem;
+  transition: all var(--transition-speed);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Loading Animation
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+}
+
+// Search Box Style
+.search-box {
+  position: relative;
+  
+  .bi-search {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+  }
+  
+  input {
+    padding-left: 2.5rem;
+    border-radius: 2rem;
+  }
+}
